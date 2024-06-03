@@ -11,10 +11,13 @@ const TodoItem = ({todos, toggleTodo}: Props) => {
 
     return (
         <ul className={`todolist__right`}>
+            {
+                todos.length === 0 && <div className={`empty`}>No tasks</div>
+            }
             {todos.map((todo) => (
-                <li key={todo.id} className={`item item${!todo.completed ? '__active' : '__done'}`}>
+                <li key={todo.id} className={`item item${!todo.completed ? '--active' : '--done'}`}>
                     <div>{todo.title}</div>
-                    <Button text={todo.completed ? 'Done' : 'Active'} handleClick={() => toggleTodo(todo.id)}/>
+                    <Button className={`btn btn${todo.completed ? '--active' : '--done'}`} text={todo.completed ? 'Done' : 'Active'} handleClick={() => toggleTodo(todo.id)}/>
                 </li>
             ))}
         </ul>

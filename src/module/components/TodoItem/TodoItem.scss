@@ -25,6 +25,11 @@
       margin-bottom: 5px;
       background: white;
       border: 1px solid grey;
+
+      &--active{
+        border: 2px solid #0bb93f;
+        color: #0bb93f;
+      }
     }
   }
 
@@ -61,12 +66,12 @@
       border-radius: 5px;
 
 
-      &__active{
+      &--active{
         border: 2px solid lightgray;
       }
 
-      &__done{
-        border: 2px solid #0385ff;
+      &--done{
+        border: 2px solid #0bb93f;
       }
     }
   }

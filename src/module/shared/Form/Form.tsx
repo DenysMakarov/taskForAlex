@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import '../styles.scss';
 import Input from "../Input/Input";
+import './Form.scss';
 
 interface Props {
     addTodo: (value: string) => void;
