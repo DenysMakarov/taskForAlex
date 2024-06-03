@@ -1,4 +1,4 @@
-# Redmi MD - TodoList Application Documentation
+# TodoList Application Documentation
 
 ## Overview
 
@@ -18,6 +18,11 @@ The **TodoList** application is built with **React** and **TypeScript**. This ap
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+# Installation and Setup
+
+1. **clone repo**
+2. **npm install**: to install all the dependencies
 
 ## Available Scripts
 
