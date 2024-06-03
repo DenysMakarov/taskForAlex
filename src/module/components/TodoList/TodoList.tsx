@@ -3,8 +3,8 @@ import {Todo} from "../../interfaces";
 import './TodoList.scss';
 import Form from "../../shared/Form/Form";
 import TodoItem from "../TodoItem/TodoItem";
-import {loadTodosFromLocalStorage, saveTodosToLocalStorage} from "../../utils/utils";
-import Btn from "../../shared/Btn/Btn";
+import {saveTodosToLocalStorage} from "../../utils/utils";
+import Button from "../../shared/Btn/Button";
 
 interface TodoListProps {
     todosFromStorage: Todo[];
@@ -17,7 +17,7 @@ const TodoList = ({todosFromStorage}: TodoListProps) => {
 
 
     useEffect(() => {
-        saveTodosToLocalStorage(todos);
+        saveTodosToLocalStorage<Todo>('todos', todos);
     }, [todos]);
 
 
@@ -28,7 +28,6 @@ const TodoList = ({todosFromStorage}: TodoListProps) => {
             completed: false,
         };
         setTodos([...todos, newTodo]);
-        saveTodosToLocalStorage([...todos, newTodo]);
     };
 
     const toggleTodo = (id: number) => {
@@ -69,9 +68,9 @@ const TodoList = ({todosFromStorage}: TodoListProps) => {
 
                 <div className={`todolist__block`}>
                     <div className={`todolist__left`}>
-                        <Btn text={'All'} handleClick={() => handleFilter('All')}/>
-                        <Btn text={'Active'} handleClick={() => handleFilter('Active')}/>
-                        <Btn text={'Done'} handleClick={() => handleFilter('Done')}/>
+                        <Button className={`btn filter-btn`} text={'All'} handleClick={() => handleFilter('All')} isActive={filter === 'All'} />
+                        <Button className={`btn filter-btn`} text={'Active'} handleClick={() => handleFilter('Active')} isActive={filter === 'Active'} />
+                        <Button className={`btn filter-btn`} text={'Done'} handleClick={() => handleFilter('Done')} isActive={filter === 'Done'} />
                     </div>
 
                     <TodoItem todos={filteredTodos} toggleTodo={toggleTodo}/>

@@ -29,7 +29,6 @@
   }
 
   &__left{
-    //border: 1px solid red;
     height: 100px;
     display: flex;
     flex-direction: column;
@@ -41,7 +40,6 @@
   }
 
   &__right{
-    //border: 1px solid red;
     height: 100px;
     width: 90%;
     display: flex;
@@ -68,14 +66,9 @@
       }
 
       &__done{
-        border: 2px solid green;
+        border: 2px solid #0385ff;
       }
     }
   }
 
 }
-
-//.item-btn{
-//  border: 1px solid red;
-//  width: 50px;
-//}

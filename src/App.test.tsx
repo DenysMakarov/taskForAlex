@@ -2,7 +2,7 @@ import React from 'react';
 import {fireEvent, render, screen} from '@testing-library/react';
 import App from './App';
 import TodoList from "./module/components/TodoList/TodoList";
-import Btn from "./module/shared/Btn/Btn";
+import Button from "./module/shared/Btn/Button";
 
 describe('App Component', () => {
 

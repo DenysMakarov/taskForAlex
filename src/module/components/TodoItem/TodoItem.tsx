@@ -1,6 +1,6 @@
 import React from 'react';
 import {Todo} from "../../interfaces";
-import Btn from "../../shared/Btn/Btn";
+import Button from "../../shared/Btn/Button";
 import './TodoItem.scss';
 
 interface Props {
@@ -14,7 +14,7 @@ const TodoItem = ({todos, toggleTodo}: Props) => {
             {todos.map((todo) => (
                 <li key={todo.id} className={`item item${!todo.completed ? '__active' : '__done'}`}>
                     <div>{todo.title}</div>
-                    <Btn text={todo.completed ? 'Done' : 'Active'} handleClick={() => toggleTodo(todo.id)}/>
+                    <Button text={todo.completed ? 'Done' : 'Active'} handleClick={() => toggleTodo(todo.id)}/>
                 </li>
             ))}
         </ul>

@@ -1,8 +1,9 @@
+
 .todolist {
   max-width: 520px;
   margin: 0 auto;
 
-  .form{
+  .form {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10,26 +11,25 @@
     margin-bottom: 20px;
   }
 
-  &__block{
+  &__block {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
 
-    .btn{
+    .btn {
       cursor: pointer;
       width: 70px;
       height: 30px;
       border-radius: 5px;
-      margin-bottom: 5px;
+      margin-bottom: 0 !important;
       background: white;
       border: 1px solid grey;
     }
   }
 
-  &__left{
-    //border: 1px solid red;
+  &__left {
     height: 100px;
     display: flex;
     flex-direction: column;
@@ -38,10 +38,13 @@
     width: 10%;
     padding: 10px;
 
+    & .filter-btn {
+      margin-bottom: 5px !important;
+    }
+
   }
 
-  &__right{
-    //border: 1px solid red;
+  &__right {
     height: 100px;
     width: 90%;
     display: flex;
@@ -52,7 +55,7 @@
     list-style-type: none;
     gap: 5px;
 
-    .item{
+    .item {
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -63,17 +66,22 @@
       border-radius: 5px;
 
 
-      &__active{
+      &__active {
         border: 2px solid lightgray;
       }
 
-      &__done{
+      &__done {
         border: 2px solid green;
       }
     }
   }
 
-
-
+  .btn.active {
+    border: 1px solid transparent!important;
+    color: white;
+    background: #0385ff!important;
+  }
 
 }
+
+
